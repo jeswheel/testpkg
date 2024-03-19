@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jeswheel.github.io/testpkg/vignettes/test2.html</loc>
-    <lastmod>2024-03-19T16:25:07.647Z</lastmod>
+    <lastmod>2024-03-19T17:26:12.776Z</lastmod>
   </url>
   <url>
     <loc>https://jeswheel.github.io/testpkg/index.html</loc>
-    <lastmod>2024-03-19T16:19:14.364Z</lastmod>
+    <lastmod>2024-03-19T17:24:41.655Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jeswheel.github.io/testpkg/packageWebsiteInstructions.html</loc>
+    <lastmod>2024-03-19T17:24:41.655Z</lastmod>
   </url>
   <url>
     <loc>https://jeswheel.github.io/testpkg/about.html</loc>
-    <lastmod>2024-03-19T16:19:14.364Z</lastmod>
+    <lastmod>2024-03-19T17:24:41.655Z</lastmod>
   </url>
   <url>
     <loc>https://jeswheel.github.io/testpkg/vignettes/test1.html</loc>
-    <lastmod>2024-03-19T16:25:07.647Z</lastmod>
+    <lastmod>2024-03-19T17:26:12.776Z</lastmod>
   </url>
 </urlset>

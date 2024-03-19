@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "testpkg"
+  title: testpkg
   navbar:
     left:
       - href: index.qmd
@@ -26,10 +26,9 @@ website:
           - packageWebsiteInstructions.qmd
       # - section: "Manual Pages"
       #   contents: man/myfun.html
-
 format:
   html:
-    theme: cosmo
+    theme: yeti
     css: styles.css
     toc: true
 

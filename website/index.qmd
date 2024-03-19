@@ -1,5 +1,5 @@
 ---
-title: "website"
+title: "Test Package"
 ---
 
 This is a Quarto website for the new `R` package: `testpkg`. 

@@ -3,12 +3,19 @@ project:
   output-dir: docs
 
 website:
-  title: "website"
+  title: "testpkg"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - text: Vignettes
+        menu:
+          - href: vignettes/test1.Rmd
+            text: Vignette 1
+          - href: vignettes/test2.Rmd
+            text: Vignette 2
 
 format:
   html:

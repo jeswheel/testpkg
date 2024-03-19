@@ -2,7 +2,7 @@
 title: "website"
 ---
 
-This is a Quarto website.
+This is a Quarto website for the new `R` package: `testpkg`. 
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 

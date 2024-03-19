@@ -9,13 +9,13 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "website",
+    "title": "Test Package",
     "section": "",
     "text": "This is a Quarto website for the new R package: testpkg.\nThis package doesn’t do anything, but it is used to demonstrate how to create a Quarto website for the package and how to set up a GitHub action that updates the website whenever there are changes to the package.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
       "Home",
       "Basics",
-      "website"
+      "Test Package"
     ]
   },
   {

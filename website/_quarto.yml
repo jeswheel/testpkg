@@ -8,14 +8,24 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
+      - href: packageWebsiteInstructions.qmd
+        text: Detailed Instructions
       - text: Vignettes
         menu:
           - href: vignettes/test1.Rmd
             text: Vignette 1
           - href: vignettes/test2.Rmd
             text: Vignette 2
+
+  sidebar:
+    style: "docked"
+    contents:
+      - section: "Basics"
+        contents:
+          - index.qmd
+          - packageWebsiteInstructions.qmd
+      # - section: "Manual Pages"
+      #   contents: man/myfun.html
 
 format:
   html:

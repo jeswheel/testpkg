@@ -56,11 +56,11 @@ jobs:
       - name: Install Dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::rcmdcheck
+          extra-packages: any::rcmdcheck, tools
 
       - name: Install "testpkg" from source
         run: |
-          R CMD INSTALL .
+          R CMD INSTALL --preclean --no-multiarc --with-keep.source .
 
       - name: Copy Vignettes and Other Files
         run: |

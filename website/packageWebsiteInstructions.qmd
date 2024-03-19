@@ -1,0 +1,42 @@
+The goal of this document is to demonstrate how you can create a custom Quarto-website that is hosted using GitHub Pages, and automatically updates whenever there is an update to your `R` package. 
+
+# Initial Set up
+1. Create new quarto website project using R-studio. This project is nested inside of the larger package, in a sub-folder called "website" (this can be named anything, but this is a good name to me. Use this name in steps 3, 4, and 5)
+2. Modified the _quarto.yml document to have under project: output-dir: docs.
+3. Added website/docs to .gitignore
+4. Commit all of the files in website (aside from docs folder) to make first initialization.
+5. Locally, run `quarto publish gh-pages website`, and then `Y` to the option that arises. This will set-up and publish the first version of the website to gh-pages branch.
+
+Congrats! You have a basic working website for your package.
+
+
+# Set-up GitHub Actions (GHA)
+
+It's a bit strange, but to properlly set up a GHA using standard pre-existing actions (the easiest thing to do), you first have to do step (5) from above. This is needed for the action to know where / how to publish in the future. I haven't found a good way around this yet, but in theory you could modify the action so that you don't need the initial publish.
+
+1. Make the `.github/workflows` directory.
+2. The basic GHA can be found here: https://quarto.org/docs/publishing/github-pages.html#github-action. The part that you must change (if following the steps above), is adding a "path" yaml argument underneath "target" (using the sub-folder name chosen in step (1) above):
+
+```
+        - name: Render and Publish
+          uses: quarto-dev/quarto-actions/publish@v2
+          with:
+            target: gh-pages
+            path: website
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+You will also need to modify the action so that you install the necessary package dependencies. There are multiple ways to do this, and can be found consulting the internet.
+3. If you want to include links to package vignettes or other things (like package news / description) that should exist in the package but are not yet on the website, you can make a step in the action that simply copies these files to the website:
+
+```
+        - name: Copy Vignettes and Other Files
+        run: |
+          cp -r vignettes website/
+```
+
+When the package is rendered it will run `.Rmd` files so you just need to copy them over. If you copy any files over this way, and would like to test the website locally, you can just manually copy over the files using the same code that you use in the GHA.
+
+**NOTE:** If you do this, you probably want to add any copied files into the .gitignore, so you don't have two versions of the same files running around your .git. For example, adding `website/vignettes` to your .gitignore is a good idea so that you're not tracking files that you only need to test the website locally.
+

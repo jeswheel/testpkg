@@ -5,14 +5,14 @@ The goal of this document is to demonstrate how you can create a custom Quarto-w
 2. Modified the _quarto.yml document to have under project: output-dir: docs.
 3. Added website/docs to .gitignore
 4. Commit all of the files in website (aside from docs folder) to make first initialization.
-5. Locally, run `quarto publish gh-pages website`, and then `Y` to the option that arises. This will set-up and publish the first version of the website to gh-pages branch.
+5. (Optional) Locally, run `quarto publish gh-pages website`, and then `Y` to the option that arises. This will set-up and publish the first version of the website to gh-pages branch. 
 
 Congrats! You have a basic working website for your package.
 
 
 # Set-up GitHub Actions (GHA)
 
-It's a bit strange, but to properlly set up a GHA using standard pre-existing actions (the easiest thing to do), you first have to do step (5) from above. This is needed for the action to know where / how to publish in the future. I haven't found a good way around this yet, but in theory you could modify the action so that you don't need the initial publish.
+If you didn't do step (5) above, you just need to manually change your settings in the GitHub repository so that the GitHub actions will work. There is an example in [this video](https://www.youtube.com/watch?v=arzBRW5XIkg) that can be helpful.
 
 1. Make the `.github/workflows` directory.
 2. The basic GHA can be found here: https://quarto.org/docs/publishing/github-pages.html#github-action. The part that you must change (if following the steps above), is adding a "path" yaml argument underneath "target" (using the sub-folder name chosen in step (1) above):

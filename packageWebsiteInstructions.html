@@ -186,13 +186,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Modified the _quarto.yml document to have under project: output-dir: docs.</li>
 <li>Added website/docs to .gitignore</li>
 <li>Commit all of the files in website (aside from docs folder) to make first initialization.</li>
-<li>Locally, run <code>quarto publish gh-pages website</code>, and then <code>Y</code> to the option that arises. This will set-up and publish the first version of the website to gh-pages branch.</li>
+<li>(Optional) Locally, run <code>quarto publish gh-pages website</code>, and then <code>Y</code> to the option that arises. This will set-up and publish the first version of the website to gh-pages branch.</li>
 </ol>
 <p>Congrats! You have a basic working website for your package.</p>
 </section>
 <section id="set-up-github-actions-gha" class="level1">
 <h1>Set-up GitHub Actions (GHA)</h1>
-<p>It’s a bit strange, but to properlly set up a GHA using standard pre-existing actions (the easiest thing to do), you first have to do step (5) from above. This is needed for the action to know where / how to publish in the future. I haven’t found a good way around this yet, but in theory you could modify the action so that you don’t need the initial publish.</p>
+<p>If you didn’t do step (5) above, you just need to manually change your settings in the GitHub repository so that the GitHub actions will work. There is an example in <a href="https://www.youtube.com/watch?v=arzBRW5XIkg">this video</a> that can be helpful.</p>
 <ol type="1">
 <li>Make the <code>.github/workflows</code> directory.</li>
 <li>The basic GHA can be found here: https://quarto.org/docs/publishing/github-pages.html#github-action. The part that you must change (if following the steps above), is adding a “path” yaml argument underneath “target” (using the sub-folder name chosen in step (1) above):</li>

@@ -16,6 +16,8 @@ website:
             text: Vignette 1
           - href: vignettes/test2.Rmd
             text: Vignette 2
+      - href: html/00Index.html
+        text: Manual
 
   sidebar:
     style: "docked"

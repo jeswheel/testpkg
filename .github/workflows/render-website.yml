@@ -70,7 +70,8 @@ jobs:
         run: |
           mkdir -p library
           Rscript -e "devtools::install(args=c('--preclean','--html','--library=library'))"
-          cp -r library/testpkg/html website/.
+          rsync --delete -a library/testpkg/html/ website/html
+          rsync --delete --exclude=aliases.rds --exclude=paths.rds --exclude=testpkg.rdb --exclude=testpkg.rdx --exclude=macros -a library/testpkg/help/ website/help
           cp library/testpkg/NEWS.md website/NEWS
 
       - name: Render and Publish

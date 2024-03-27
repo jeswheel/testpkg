@@ -8,3 +8,6 @@ inst/doc
 website/docs
 website/vignettes
 website/man
+website/html
+website/help
+library

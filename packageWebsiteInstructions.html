@@ -172,7 +172,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#initial-set-up" id="toc-initial-set-up" class="nav-link active" data-scroll-target="#initial-set-up">Initial Set up</a></li>
-  <li><a href="#set-up-github-actions-gha" id="toc-set-up-github-actions-gha" class="nav-link" data-scroll-target="#set-up-github-actions-gha">Set-up GitHub Actions (GHA)</a></li>
+  <li><a href="#set-up-github-actions-gha" id="toc-set-up-github-actions-gha" class="nav-link" data-scroll-target="#set-up-github-actions-gha">Set-up GitHub Actions (GHA)</a>
+  <ul class="collapse">
+  <li><a href="#panelpomp-website" id="toc-panelpomp-website" class="nav-link" data-scroll-target="#panelpomp-website">PanelPomp Website</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -214,8 +217,12 @@ ul.task-list li input[type="checkbox"] {
           cp -r vignettes website/</code></pre>
 <p>When the package is rendered it will run <code>.Rmd</code> files so you just need to copy them over. If you copy any files over this way, and would like to test the website locally, you can just manually copy over the files using the same code that you use in the GHA.</p>
 <p><strong>NOTE:</strong> If you do this, you probably want to add any copied files into the .gitignore, so you don’t have two versions of the same files running around your .git. For example, adding <code>website/vignettes</code> to your .gitignore is a good idea so that you’re not tracking files that you only need to test the website locally.</p>
+<section id="panelpomp-website" class="level2">
+<h2 class="anchored" data-anchor-id="panelpomp-website">PanelPomp Website</h2>
+<p>The <a href="https://jeswheel.github.io/panelPomp"><code>panelPomp</code> package Website</a> provides another non-trivial example of this website development approach in action. I recommend looking at the YAML workflow file <code>.github/workflows/render-website</code>. I will create more documentation for this workflow soon.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

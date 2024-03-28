@@ -40,3 +40,7 @@ When the package is rendered it will run `.Rmd` files so you just need to copy t
 
 **NOTE:** If you do this, you probably want to add any copied files into the .gitignore, so you don't have two versions of the same files running around your .git. For example, adding `website/vignettes` to your .gitignore is a good idea so that you're not tracking files that you only need to test the website locally.
 
+## PanelPomp Website
+
+The [`panelPomp` package Website](https://jeswheel.github.io/panelPomp) provides another non-trivial example of this website development approach in action. 
+I recommend looking at the YAML workflow file `.github/workflows/render-website`. I will create more documentation for this workflow soon. 
